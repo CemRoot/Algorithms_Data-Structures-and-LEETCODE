@@ -37,6 +37,81 @@ This repository is organized to provide a structured approach to learning:
     *   Consider creating a `LeetCode_Solutions` directory and linking it here: `[Link to LeetCode Solutions Directory if applicable]`
 *   **Notes & Explanations:** Theoretical notes, cheat sheets, and conceptual explanations related to algorithms and data structures (e.g., Big O notation examples like `O(1).py`, `O(n).py`, `O(n^2).py`).
 
+## 📊 Big-O Complexity Reference
+
+> **Reference:** [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
+
+Understanding time and space complexity is crucial for algorithm analysis. Below are comprehensive tables showing the complexities of common data structures and algorithms.
+
+### Complexity Chart Guide
+
+| Complexity | Description | Color Code |
+|------------|-------------|------------|
+| **O(1)** | Excellent - Constant time | 🟢 |
+| **O(log n)** | Excellent - Logarithmic time | 🟢 |
+| **O(n)** | Good - Linear time | 🟡 |
+| **O(n log n)** | Fair - Linearithmic time | 🟠 |
+| **O(n²)** | Bad - Quadratic time | 🔴 |
+| **O(2^n)** | Horrible - Exponential time | 🔴 |
+| **O(n!)** | Horrible - Factorial time | 🔴 |
+
+### Common Data Structure Operations
+
+| Data Structure | Average Time Complexity ||||||| Worst Time Complexity ||||||| Space Complexity |
+|----------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|                | Access | Search | Insertion | Deletion | Access | Search | Insertion | Deletion | Worst |
+| **Array** | Θ(1) | Θ(n) | Θ(n) | Θ(n) | O(1) | O(n) | O(n) | O(n) | O(n) |
+| **Stack** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Queue** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Singly-Linked List** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Doubly-Linked List** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Hash Table** | N/A | Θ(1) | Θ(1) | Θ(1) | N/A | O(n) | O(n) | O(n) | O(n) |
+| **Binary Search Tree** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(n) | O(n) | O(n) | O(n) | O(n) |
+| **AVL Tree** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| **B-Tree** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| **Red-Black Tree** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+
+### Array Sorting Algorithms
+
+| Algorithm | Best Time | Average Time | Worst Time | Space Complexity | Stable? |
+|-----------|-----------|-------------|------------|------------------|---------|
+| **Quicksort** | Ω(n log n) | Θ(n log n) | O(n²) | O(log n) | No |
+| **Mergesort** | Ω(n log n) | Θ(n log n) | O(n log n) | O(n) | Yes |
+| **Heapsort** | Ω(n log n) | Θ(n log n) | O(n log n) | O(1) | No |
+| **Bubble Sort** | Ω(n) | Θ(n²) | O(n²) | O(1) | Yes |
+| **Insertion Sort** | Ω(n) | Θ(n²) | O(n²) | O(1) | Yes |
+| **Selection Sort** | Ω(n²) | Θ(n²) | O(n²) | O(1) | No |
+| **Counting Sort** | Ω(n+k) | Θ(n+k) | O(n+k) | O(k) | Yes |
+| **Radix Sort** | Ω(nk) | Θ(nk) | O(nk) | O(n+k) | Yes |
+
+### Key Insights for Algorithm Analysis
+
+1. **Linked Lists vs Arrays:**
+   - **Access:** Arrays win with O(1), Lists need O(n)
+   - **Insertion/Deletion:** Lists win with O(1) at head/tail, Arrays need O(n)
+   - **Memory:** Lists use extra space for pointers
+
+2. **When to Use Each Sorting Algorithm:**
+   - **Quick Sort:** General purpose, good average performance
+   - **Merge Sort:** When stability is needed and O(n log n) guarantee
+   - **Heap Sort:** When constant space is critical
+   - **Insertion Sort:** Small datasets or nearly sorted data
+   - **Counting/Radix Sort:** When data range is limited
+
+3. **Tree Structures:**
+   - **BST:** Simple but can degrade to O(n) if unbalanced
+   - **AVL/Red-Black:** Self-balancing, guaranteed O(log n)
+   - **Hash Tables:** O(1) average but O(n) worst case
+
+### Big-O Examples in This Repository
+
+You can find practical examples of different time complexities in these files:
+- `O(1).py` - Constant time operations
+- `O(n).py` - Linear time algorithms  
+- `O(n^2).py` - Quadratic time complexity
+- `Drop+Const.py` - How constants are dropped in Big-O analysis
+- `Different+Terms.py` - O(a + b) complexity analysis
+
 ## 🚀 Getting Started & How to Use
 
 This repository can be used in several ways:
@@ -139,6 +214,81 @@ Bu depo, öğrenmeye yapılandırılmış bir yaklaşım sunmak üzere organize 
 *   **LeetCode Çözümleri:** Seçilmiş LeetCode problemlerine yönelik, zorluk seviyesine ve konuya göre kategorize edilmiş çözümler. Her çözümün iyi yorumlanmış ve açıklanmış olması hedeflenir.
     *   Bir `LeetCode_Cozumleri` dizini oluşturmayı ve buraya bağlamayı düşünebilirsiniz: `[LeetCode Çözümleri Dizini Bağlantısı - Varsa]`
 *   **Notlar & Açıklamalar:** Algoritmalar ve veri yapılarıyla ilgili teorik notlar, özet bilgiler (cheat sheets) ve kavramsal açıklamalar (örn: `O(1).py`, `O(n).py`, `O(n^2).py` gibi Big O notasyonu örnekleri).
+
+## 📊 Big-O Karmaşıklık Referansı
+
+> **Kaynak:** [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
+
+Zaman ve alan karmaşıklığını anlamak algoritma analizi için çok önemlidir. Aşağıda yaygın veri yapıları ve algoritmaların karmaşıklıklarını gösteren kapsamlı tablolar bulunmaktadır.
+
+### Karmaşıklık Tablosu Rehberi
+
+| Karmaşıklık | Açıklama | Renk Kodu |
+|-------------|----------|-----------|
+| **O(1)** | Mükemmel - Sabit zaman | 🟢 |
+| **O(log n)** | Mükemmel - Logaritmik zaman | 🟢 |
+| **O(n)** | İyi - Doğrusal zaman | 🟡 |
+| **O(n log n)** | Orta - Doğrusal-logaritmik zaman | 🟠 |
+| **O(n²)** | Kötü - Karesel zaman | 🔴 |
+| **O(2^n)** | Korkunç - Üstel zaman | 🔴 |
+| **O(n!)** | Korkunç - Faktöriyel zaman | 🔴 |
+
+### Yaygın Veri Yapısı İşlemleri
+
+| Veri Yapısı | Ortalama Zaman Karmaşıklığı ||||||| En Kötü Zaman Karmaşıklığı ||||||| Alan Karmaşıklığı |
+|-------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|             | Erişim | Arama | Ekleme | Silme | Erişim | Arama | Ekleme | Silme | En Kötü |
+| **Dizi (Array)** | Θ(1) | Θ(n) | Θ(n) | Θ(n) | O(1) | O(n) | O(n) | O(n) | O(n) |
+| **Yığın (Stack)** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Kuyruk (Queue)** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Tek Yönlü Bağlı Liste** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Çift Yönlü Bağlı Liste** | Θ(n) | Θ(n) | Θ(1) | Θ(1) | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Hash Tablosu** | N/A | Θ(1) | Θ(1) | Θ(1) | N/A | O(n) | O(n) | O(n) | O(n) |
+| **İkili Arama Ağacı** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(n) | O(n) | O(n) | O(n) | O(n) |
+| **AVL Ağacı** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| **B-Ağacı** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| **Kırmızı-Siyah Ağaç** | Θ(log n) | Θ(log n) | Θ(log n) | Θ(log n) | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+
+### Dizi Sıralama Algoritmaları
+
+| Algoritma | En İyi Zaman | Ortalama Zaman | En Kötü Zaman | Alan Karmaşıklığı | Kararlı? |
+|-----------|-------------|---------------|---------------|------------------|----------|
+| **Hızlı Sıralama (Quicksort)** | Ω(n log n) | Θ(n log n) | O(n²) | O(log n) | Hayır |
+| **Birleştirme Sıralaması (Mergesort)** | Ω(n log n) | Θ(n log n) | O(n log n) | O(n) | Evet |
+| **Yığın Sıralaması (Heapsort)** | Ω(n log n) | Θ(n log n) | O(n log n) | O(1) | Hayır |
+| **Kabarcık Sıralaması (Bubble Sort)** | Ω(n) | Θ(n²) | O(n²) | O(1) | Evet |
+| **Ekleme Sıralaması (Insertion Sort)** | Ω(n) | Θ(n²) | O(n²) | O(1) | Evet |
+| **Seçim Sıralaması (Selection Sort)** | Ω(n²) | Θ(n²) | O(n²) | O(1) | Hayır |
+| **Sayma Sıralaması (Counting Sort)** | Ω(n+k) | Θ(n+k) | O(n+k) | O(k) | Evet |
+| **Radix Sıralama** | Ω(nk) | Θ(nk) | O(nk) | O(n+k) | Evet |
+
+### Algoritma Analizi İçin Temel Bilgiler
+
+1. **Bağlı Listeler vs Diziler:**
+   - **Erişim:** Diziler O(1) ile kazanır, Listeler O(n) gerektirir
+   - **Ekleme/Silme:** Listeler baş/kuyrukta O(1) ile kazanır, Diziler O(n) gerektirir
+   - **Bellek:** Listeler işaretçiler için ekstra alan kullanır
+
+2. **Hangi Sıralama Algoritması Ne Zaman Kullanılır:**
+   - **Hızlı Sıralama:** Genel amaçlı, iyi ortalama performans
+   - **Birleştirme Sıralaması:** Kararlılık gerektiğinde ve O(n log n) garantisi
+   - **Yığın Sıralaması:** Sabit alan kritik olduğunda
+   - **Ekleme Sıralaması:** Küçük veri setleri veya neredeyse sıralı veriler
+   - **Sayma/Radix Sıralama:** Veri aralığı sınırlı olduğunda
+
+3. **Ağaç Yapıları:**
+   - **BST:** Basit ama dengelenmezse O(n)'e düşebilir
+   - **AVL/Kırmızı-Siyah:** Kendi kendini dengeler, garantili O(log n)
+   - **Hash Tabloları:** O(1) ortalama ama O(n) en kötü durum
+
+### Bu Depodaki Big-O Örnekleri
+
+Bu dosyalarda farklı zaman karmaşıklıklarının pratik örneklerini bulabilirsiniz:
+- `O(1).py` - Sabit zamanlı işlemler
+- `O(n).py` - Doğrusal zaman algoritmaları  
+- `O(n^2).py` - Karesel zaman karmaşıklığı
+- `Drop+Const.py` - Big-O analizinde sabitlerin nasıl atıldığı
+- `Different+Terms.py` - O(a + b) karmaşıklık analizi
 
 ## 🚀 Başlarken & Nasıl Kullanılır?
 
